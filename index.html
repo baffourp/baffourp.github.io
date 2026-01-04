@@ -6,65 +6,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
+    :root {
+      --bg: #ffffff;
+      --text: #222;
+      --muted: #555;
+      --link: #0366d6;
+      --border: #ddd;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --text: #e6e6e6;
+        --muted: #aaa;
+        --link: #58a6ff;
+        --border: #30363d;
+      }
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      max-width: 900px;
-      margin: 60px auto;
+      max-width: 880px;
+      margin: 64px auto;
       padding: 0 20px;
-      line-height: 1.7;
-      color: #222;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
     }
+
     h1 {
-      font-size: 2.4em;
-      margin-bottom: 0.2em;
+      font-size: 2.3em;
+      margin-bottom: 0.1em;
     }
+
     h2 {
-      margin-top: 1.8em;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.3em;
+      margin-top: 2.2em;
+      padding-bottom: 0.25em;
+      border-bottom: 1px solid var(--border);
+      font-size: 1.35em;
     }
+
+    h3 {
+      margin-top: 1.2em;
+      font-size: 1.1em;
+    }
+
+    p, li {
+      color: var(--text);
+    }
+
     a {
-      color: #0366d6;
+      color: var(--link);
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    .subtitle {
+      color: var(--muted);
+    }
+
+    details {
+      margin-top: 1em;
+    }
+
+    summary {
+      font-weight: 600;
+      cursor: pointer;
     }
   </style>
 </head>
 
 <body>
+
   <h1>George Baffour Pipim</h1>
+  <p class="subtitle">
+    PhD Researcher · Theoretical & Computational Chemistry
+  </p>
 
-<p>
-  PhD Researcher · Theoretical & Computational Chemistry
-</p>
+  <p>
+    <a href="https://scholar.google.com/citations?user=zI0VEhkAAAAJ&hl=en" target="_blank">🎓 Google Scholar</a>
+    ·
+    <a href="https://orcid.org/0000-0002-4700-8005" target="_blank">🆔 ORCID</a>
+    ·
+    <a href="https://github.com/baffourp" target="_blank">💻 GitHub</a>
+  </p>
 
-<p>
-  <a href="https://scholar.google.com/citations?user=zI0VEhkAAAAJ&hl=en" target="_blank">
-    🎓 Google Scholar
-  </a>
-  ·
-  <a href="https://orcid.org/0000-0002-4700-8005" target="_blank">
-    🆔 ORCID
-  </a>
-</p>
-<p>
-  <strong>Publications:</strong> 18 peer-reviewed articles
-</p>
-  
   <p>
-  My research focuses on theoretical and computational chemistry, with emphasis on
-  excited-state electronic structure, photophysics, and photochemistry of functional
-  molecular systems. I employ first-principles electronic structure methods to 
-  investigate photoredox catalysts, ionic liquid ion source propellants for electrospray thrusters, and reaction mechanisms in complex
-  molecular systems.
-</p>
-  
-  <h2>About</h2>
+    <strong>Publications:</strong> 18 peer-reviewed articles
+  </p>
+
+  <h2>Research Summary</h2>
   <p>
-    I am a PhD researcher working on photophysics and photochemistry of molecular systems, and
-    with interests in the  dynamics of molecules under strong electric fields.
+    My research focuses on theoretical and computational chemistry, with emphasis on
+    excited-state electronic structure, photophysics, and photochemistry of functional
+    molecular systems. I employ first-principles electronic structure methods and
+    ab initio molecular dynamics to investigate photoredox catalysts,
+    ionic-liquid ion-source propellants for electrospray thrusters,
+    and reaction mechanisms in complex molecular systems.
   </p>
 
   <h2>Research Interests</h2>
@@ -74,49 +115,43 @@
     <li>Ionic liquid electrospray thrusters</li>
     <li>Metalloporphyrins and nucleotide dynamics</li>
   </ul>
-<h2>Publications</h2>
 
-<h3>Selected Publications</h3>
-<ol>
+  <h2>Projects</h2>
 
-  <li>
-    <strong>Baffour Pipim, G.</strong>, Sampson, D. K., Tingey, N. N., Torres, J., Depew, D., Wang, J., & Krylov, I. A.
-    <em>Ab initio simulations of dynamics of EMI-BF4 ionic liquid propellant used in electrospray thrusters for nanosatellite applications.</em>
-    <em>J. Chem. Phys.</em> 163, no. 22 (2025).
-    <a href="https://doi.org/10.1063/5.0296441">doi.org/10.1063/5.0296441</a>
-  </li>
+  <details open>
+    <summary>Photoreduction of CO₂ with Organic Photoredox Catalysts</summary>
+    <p>
+      First-principles studies of excited-state electronic structure,
+      charge-transfer pathways, and photochemical mechanisms in organic
+      photocatalysts for CO₂ conversion.
+    </p>
+  </details>
 
-  <li>
-    <strong>Baffour Pipim, G.</strong>, Sharada, S. M., & Krylov, I. A.
-    <em>Photophysical properties of functionalized terphenyls and implications to photoredox catalysis.</em>
-    <em>Pure Appl. Chem.</em> (2025).
-    <a href="https://doi.org/10.1515/pac-2025-0560">doi.org/10.1515/pac-2025-0560</a>
-  </li>
+  <details>
+    <summary>Ionic Liquid Propellants for Electrospray Thrusters</summary>
+    <p>
+      Ab initio molecular dynamics simulations of EMI-BF₄ under strong electric
+      fields to understand ion evaporation, fragmentation, and propulsion-relevant
+      processes in nanosatellite thrusters.
+    </p>
+  </details>
 
-  <li>
-    Patra, A., <strong>Baffour Pipim, G.</strong>, Krylov, I. A., & Sharada, S. M.
-    <em>Performance of density functionals for excited-state properties of isolated chromophores and exciplexes.</em>
-    <em>J. Chem. Theory Comput.</em> (2024).
-    <a href="https://doi.org/10.1021/acs.jctc.4c00005">doi.org/10.1021/acs.jctc.4c00005</a>
-  </li>
+  <details>
+    <summary>Excited-State Dynamics of Metalloporphyrins and Nucleotides</summary>
+    <p>
+      Computational investigations of nonadiabatic dynamics and photophysics
+      in catalytically and biologically relevant chromophores.
+    </p>
+  </details>
 
-  <li>
-    Sampson, D. K., <strong>Baffour Pipim, G.</strong>, Tingey, N. N., Torres, J., Depew, D., Wang, J., & Krylov, I. A.
-    <em>Exploring collision-induced fragmentation in porous electrospray thrusters.</em>
-    38th IEPC, IEPC-2024-613.
-    <a href="https://www.researchgate.net/publication/383983879_Exploring_Collision-Induced_Fragmentation_in_Porous_Electrospray_Thrusters">Link</a>
-  </li>
+  <h2>Publications</h2>
 
-</ol>
-
-<details>
-  <summary><strong>Full Publication List</strong></summary>
-
+  <h3>Selected Publications</h3>
   <ol>
-
     <li>
-      <strong>Baffour Pipim, G.</strong>, Sampson, D. K., Tingey, N. N., Torres, J., Depew, D., Wang, J., & Krylov, I. A.
-      <em>Ab initio simulations of dynamics of EMI-BF4 ionic liquid propellant used in electrospray thrusters for nanosatellite applications.</em>
+      <strong>Baffour Pipim, G.</strong>, Sampson, D. K., Tingey, N. N., Torres, J.,
+      Depew, D., Wang, J., & Krylov, I. A.
+      <em>Ab initio simulations of dynamics of EMI-BF₄ ionic liquid propellant used in electrospray thrusters for nanosatellite applications.</em>
       <em>J. Chem. Phys.</em> 163, no. 22 (2025).
       <a href="https://doi.org/10.1063/5.0296441">doi.org/10.1063/5.0296441</a>
     </li>
@@ -129,122 +164,26 @@
     </li>
 
     <li>
-      Sampson, D. K., <strong>Baffour Pipim, G.</strong>, Tingey, N. N., Torres, J., Depew, D., Wang, J., & Krylov, I. A.
-      <em>Exploring collision-induced fragmentation in porous electrospray thrusters.</em>
-      38th IEPC, IEPC-2024-613.
-      <a href="https://www.researchgate.net/publication/383983879_Exploring_Collision-Induced_Fragmentation_in_Porous_Electrospray_Thrusters">Link</a>
-    </li>
-
-    <li>
       Patra, A., <strong>Baffour Pipim, G.</strong>, Krylov, I. A., & Sharada, S. M.
       <em>Performance of density functionals for excited-state properties of isolated chromophores and exciplexes.</em>
       <em>J. Chem. Theory Comput.</em> (2024).
       <a href="https://doi.org/10.1021/acs.jctc.4c00005">doi.org/10.1021/acs.jctc.4c00005</a>
     </li>
-
-    <li>
-      Atta-Kumi, J., <strong>Baffour Pipim, G.</strong>, Opoku, E.
-      <em>Tandem [4+2]/retro[3+2]/[3+2] cycloaddition reactions of fluorinated-oxadiazoles.</em>
-      <em>J. Phys. Org. Chem.</em> (2023).
-      <a href="https://doi.org/10.1002/poc.4567">doi.org/10.1002/poc.4567</a>
-    </li>
-
-    <li>
-      <strong>Baffour Pipim, G.</strong>, Opoku, E.
-      <em>Catalyst-free (3+2) cycloaddition reaction of bicyclic alkenes with nitrones.</em>
-      <em>Comput. Theor. Chem.</em> 1124 (2022): 113790.
-      <a href="https://doi.org/10.1016/j.comptc.2022.113790">doi.org/10.1016/j.comptc.2022.113790</a>
-    </li>
-
-    <li>
-      Fosu, A., <strong>Baffour Pipim, G.</strong>, Tia, R., & Adei, E.
-      <em>Does the reaction of nitrone derivatives with allenoates proceed via cycloaddition or O-nucleophilic addition?</em>
-      <em>J. Mol. Graph. Model.</em> 109 (2021): 108036.
-      <a href="https://doi.org/10.1016/j.jmgm.2021.108036">doi.org/10.1016/j.jmgm.2021.108036</a>
-    </li>
-
-    <li>
-      Tawiah, A., <strong>Baffour Pipim, G.</strong>, Tia, R., & Adei, E.
-      <em>Exploring chemo-, regio-, and stereoselectivities of (3+2) cycloaddition reactions.</em>
-      <em>J. Mol. Model.</em> 27 (2021): 287.
-      <a href="https://doi.org/10.1007/s00894-021-04911-0">doi.org/10.1007/s00894-021-04911-0</a>
-    </li>
-
-    <li>
-      Ofori, I., <strong>Baffour Pipim, G.</strong>, Tia, R., & Adei, E.
-      <em>Double (3+2) cycloaddition of nitrile oxides and allenoates.</em>
-      <em>J. Mol. Graph. Model.</em> 109 (2021): 108033.
-      <a href="https://doi.org/10.1016/j.jmgm.2021.108033">doi.org/10.1016/j.jmgm.2021.108033</a>
-    </li>
-
-    <li>
-      Atta-Kumi, J., <strong>Baffour Pipim, G.</strong>, Tia, R., et al.
-      <em>Investigating site-, regio-, and stereo-selectivities of reactions between organic azide and heteronorbornadiene.</em>
-      <em>J. Mol. Model.</em> 27 (2021): 248.
-      <a href="https://doi.org/10.1007/s00894-021-04857-3">doi.org/10.1007/s00894-021-04857-3</a>
-    </li>
-
-    <li>
-      <strong>Baffour Pipim, G.</strong>, Tia, R., & Adei, E.
-      <em>Quantum chemical investigation of spiroheterocyclic compound formation via (3+2) cycloaddition reactions.</em>
-      <em>Tetrahedron</em> (2021).
-      <a href="https://doi.org/10.1016/j.tet.2021.132306">doi.org/10.1016/j.tet.2021.132306</a>
-    </li>
-
-    <li>
-      <strong>Baffour Pipim, G.</strong>, Opoku, E.
-      <em>Unveiling molecular mechanisms of cycloaddition reactions of aryl hetaryl thioketones.</em>
-      <em>J. Mol. Model.</em> 27 (2021): 84.
-      <a href="https://doi.org/10.1007/s00894-021-04706-3">doi.org/10.1007/s00894-021-04706-3</a>
-    </li>
-
-    <li>
-      <strong>Baffour Pipim, G.</strong>, Tia, R., & Adei, E.
-      <em>Computational exploration of the 1,3-dipolar cycloaddition reaction of isopropylidenebenzonorbornadiene.</em>
-      <em>J. Phys. Org. Chem.</em> (2020).
-      <a href="https://doi.org/10.1002/poc.4174">doi.org/10.1002/poc.4174</a>
-    </li>
-
-    <li>
-      <strong>Baffour Pipim, G.</strong>, Tia, R., & Adei, E.
-      <em>(3+2) cycloaddition reaction of isopropylidenebenzonorbornadiene and diazomethane derivatives.</em>
-      <em>J. Mol. Graph. Model.</em> 101 (2020): 107713.
-      <a href="https://doi.org/10.1016/j.jmgm.2020.107713">doi.org/10.1016/j.jmgm.2020.107713</a>
-    </li>
-
-    <li>
-      <strong>Baffour Pipim, G.</strong>, Tia, R., & Adei, E.
-      <em>Regio-, stereo-, and enantioselectivities of 1,3-dipolar cycloaddition reactions of nitrone derivatives.</em>
-      <em>J. Mol. Graph. Model.</em> 100 (2020): 107672.
-      <a href="https://doi.org/10.1016/j.jmgm.2020.107672">doi.org/10.1016/j.jmgm.2020.107672</a>
-    </li>
-
-    <li>
-      <strong>Baffour Pipim, G.</strong>, Opoku, E., Tia, R., & Adei, E.
-      <em>Peri-, chemo-, regio-, stereo-, and enantioselectivities of 1,3-dipolar cycloaddition reactions.</em>
-      <em>J. Mol. Graph. Model.</em> 97 (2020): 107542.
-      <a href="https://doi.org/10.1016/j.jmgm.2020.107542">doi.org/10.1016/j.jmgm.2020.107542</a>
-    </li>
-
-    <li>
-      Opoku, E., <strong>Baffour Pipim, G.</strong>, Tia, R., & Adei, E.
-      <em>Mechanistic study of tandem intramolecular/intermolecular cycloaddition reactions.</em>
-      <em>J. Heterocycl. Chem.</em> 57 (2020): 1748–1758.
-      <a href="https://doi.org/10.1002/jhet.3900">doi.org/10.1002/jhet.3900</a>
-    </li>
-
-    <li>
-      Opoku, E., Arhin, G., <strong>Baffour Pipim, G.</strong>, Adams, A. H., Tia, R., & Adei, E.
-      <em>Site-, enantio-, and stereoselectivities of cycloaddition reactions of oxanorbornadiene.</em>
-      <em>Theor. Chem. Acc.</em> 139 (2020).
-      <a href="https://doi.org/10.1007/s00214-019-2529-8">doi.org/10.1007/s00214-019-2529-8</a>
-    </li>
-
   </ol>
-</details>
-  <h2>Links</h2>
+
+  <details>
+    <summary>Full Publication List</summary>
+    <p>
+      See the complete list on
+      <a href="https://scholar.google.com/citations?user=zI0VEhkAAAAJ&hl=en" target="_blank">
+        Google Scholar
+      </a>.
+    </p>
+  </details>
+
+  <h2>Contact</h2>
   <ul>
-    <li><a href="https://github.com/baffourp">GitHub</a></li>
+    <li>Email: <em>your.email@institution.edu</em></li>
     <li><a href="George_B_Pipim_CV.pdf">Curriculum Vitae (PDF)</a></li>
   </ul>
 
