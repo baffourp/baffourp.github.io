@@ -3,16 +3,18 @@
 
 <head>
   <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>George Baffour Pipim</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="George Baffour Pipim – PhD Researcher in Theoretical and Computational Chemistry">
-  <meta name="keywords" content="computational chemistry, photophysics, photochemistry, ab initio molecular dynamics">
+  <meta content="PhD Researcher in Theoretical and Computational Chemistry" name="description">
+  <meta content="computational chemistry, photophysics, ab initio molecular dynamics" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Raleway&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +23,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS -->
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
@@ -40,56 +42,44 @@
     </a>
 
     <div class="social-links text-center">
-      <a href="https://scholar.google.com/citations?user=zI0VEhkAAAAJ&hl=en" target="_blank">
-        <i class="bi bi-mortarboard"></i>
-      </a>
-      <a href="https://orcid.org/0000-0002-4700-8005" target="_blank">
-        <i class="bi bi-person-badge"></i>
-      </a>
-      <a href="https://github.com/baffourp" target="_blank">
-        <i class="bi bi-github"></i>
-      </a>
+      <a href="https://scholar.google.com/citations?user=zI0VEhkAAAAJ" target="_blank"><i class="bi bi-mortarboard"></i></a>
+      <a href="https://orcid.org/0000-0002-4700-8005" target="_blank"><i class="bi bi-person-badge"></i></a>
+      <a href="https://github.com/baffourp" target="_blank"><i class="bi bi-github"></i></a>
     </div>
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house"></i> Home</a></li>
-        <li><a href="#about"><i class="bi bi-person"></i> About</a></li>
-        <li><a href="#research"><i class="bi bi-journal"></i> Research</a></li>
-        <li><a href="#publications"><i class="bi bi-file-text"></i> Publications</a></li>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i> Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#research"><i class="bi bi-journal navicon"></i> Research</a></li>
+        <li><a href="#publications"><i class="bi bi-file-earmark-text navicon"></i> Publications</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ======= Main ======= -->
+  <!-- ======= Hero ======= -->
+  <section id="hero" class="hero section dark-background">
+    <div class="container" data-aos="fade-in">
+      <h2>George Baffour Pipim</h2>
+      <p>I'm a <span class="typed" data-typed-items="PhD Researcher, Theoretical & Computational Chemist"></span></p>
+    </div>
+  </section>
+
   <main class="main">
 
-    <!-- ======= Hero ======= -->
-    <section id="hero" class="hero section dark-background">
-      <div class="container" data-aos="fade-in">
-        <h2>George Baffour Pipim</h2>
-        <p>
-          I'm a
-          <span class="typed"
-            data-typed-items="PhD Researcher, Theoretical & Computational Chemist">
-          </span>
-        </p>
-      </div>
-    </section>
-
     <!-- ======= About ======= -->
-    <section id="about" class="about section light-background">
+    <section id="about" class="about section">
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
       </div>
 
       <div class="container" data-aos="fade-up">
         <p>
-          I am a PhD researcher in theoretical and computational chemistry, focusing on
+          I am a PhD researcher in theoretical and computational chemistry focusing on
           excited-state electronic structure, photophysics, and photochemistry of functional
-          molecular systems. My work employs first-principles electronic structure methods
-          and ab initio molecular dynamics to study photoredox catalysts, ionic liquid
-          electrospray thrusters, and reaction mechanisms.
+          molecular systems. My work uses first-principles electronic structure methods and
+          ab initio molecular dynamics to study photoredox catalysts, ionic liquid electrospray
+          thrusters, and reaction mechanisms.
         </p>
       </div>
     </section>
@@ -111,7 +101,7 @@
     </section>
 
     <!-- ======= Publications ======= -->
-    <section id="publications" class="resume section light-background">
+    <section id="publications" class="resume section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Selected Publications</h2>
         <p>18 peer-reviewed articles</p>
@@ -131,9 +121,7 @@
           </li>
         </ol>
 
-        <p>
-          <a href="George_B_Pipim_CV.pdf" target="_blank">Download CV (PDF)</a>
-        </p>
+        <p><a href="George_B_Pipim_CV.pdf" target="_blank">Download CV (PDF)</a></p>
       </div>
     </section>
 
@@ -146,10 +134,22 @@
     </div>
   </footer>
 
-  <!-- Vendor JS -->
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS -->
   <script src="assets/js/main.js"></script>
