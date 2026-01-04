@@ -3,53 +3,147 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
   <title>George Baffour Pipim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="George Baffour Pipim – PhD Researcher in Theoretical and Computational Chemistry">
-  <meta name="keywords" content="computational chemistry, photochemistry, photophysics, molecular dynamics">
+  <meta name="keywords" content="computational chemistry, photophysics, photochemistry, ab initio molecular dynamics">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS -->
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="index-page">
 
-<!-- ======= Header ======= -->
-<header id="header" class="header dark-background d-flex flex-column">
-  <i class="header-toggle d-xl-none bi bi-list"></i>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
 
-  <div class="profile-img">
-    <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
-  </div>
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
 
-  <a href="#hero" class="logo d-flex align-items-center justify-content-center">
-    <h1 class="sitename">George Baffour Pipim</h1>
-  </a>
-
-  <div class="social-links text-center">
-    <a href="https://scholar.google.com/citations?user=zI0VEhkAAAAJ&hl=en" target="_blank">
-      <i class="bi bi-mortarboard"></i>
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">George Baffour Pipim</h1>
     </a>
-    <a href="https://orcid.org/0000-0002-4700-8005" target="_blank">
-      <i class="bi bi-person-badge"></i>
-    </a>
-    <a href="https://github.com/baffourp" target="_blank">
-      <i class="bi bi-github"></i>
-    </a>
-  </div>
 
-  <nav id
+    <div class="social-links text-center">
+      <a href="https://scholar.google.com/citations?user=zI0VEhkAAAAJ&hl=en" target="_blank"><i class="bi bi-mortarboard"></i></a>
+      <a href="https://orcid.org/0000-0002-4700-8005" target="_blank"><i class="bi bi-person-badge"></i></a>
+      <a href="https://github.com/baffourp" target="_blank"><i class="bi bi-github"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house"></i> Home</a></li>
+        <li><a href="#about"><i class="bi bi-person"></i> About</a></li>
+        <li><a href="#research"><i class="bi bi-journal"></i> Research</a></li>
+        <li><a href="#publications"><i class="bi bi-file-text"></i> Publications</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ======= Hero ======= -->
+  <section id="hero" class="hero section dark-background">
+    <div class="container" data-aos="fade-in">
+      <h2>George Baffour Pipim</h2>
+      <p>
+        I'm a
+        <span class="typed"
+          data-typed-items="PhD Researcher, Computational Chemist, Photophysics Researcher">
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <main class="main">
+
+    <!-- ======= About ======= -->
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <p>
+          I am a PhD researcher in theoretical and computational chemistry, focusing on
+          excited-state electronic structure, photophysics, and photochemistry of functional
+          molecular systems. My work employs first-principles electronic structure methods
+          and ab initio molecular dynamics to study photoredox catalysts, ionic liquid
+          electrospray thrusters, and reaction mechanisms.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======= Research ======= -->
+    <section id="research" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Research Interests</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <ul>
+          <li>Photoredox catalysis and excited-state dynamics</li>
+          <li>Ab initio molecular dynamics</li>
+          <li>Ionic liquid electrospray thrusters</li>
+          <li>Metalloporphyrins and nucleotide dynamics</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======= Publications ======= -->
+    <section id="publications" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Selected Publications</h2>
+        <p>18 peer-reviewed articles</p>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <ol>
+          <li>
+            <strong>Baffour Pipim, G.</strong> et al.
+            <em>Ab initio simulations of dynamics of EMI-BF₄ ionic liquid propellant.</em>
+            <br><em>J. Chem. Phys.</em> (2025)
+          </li>
+          <li>
+            <strong>Baffour Pipim, G.</strong>, Sharada, S. M., Krylov, I. A.
+            <em>Photophysical properties of functionalized terphenyls.</em>
+            <br><em>Pure Appl. Chem.</em> (2025)
+          </li>
+        </ol>
+
+        <p>
+          <a href="George_B_Pipim_CV.pdf" target="_blank">Download CV (PDF)</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer light-background">
+    <div class="container text-center">
+      <p>© 2026 George Baffour Pipim</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
