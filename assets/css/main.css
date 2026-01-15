@@ -1276,13 +1276,13 @@ section,
 .skill-category {
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #0d6efd;
+  color: #fd0d9d;
 }
 
 .skill-level {
   font-size: 0.85rem;
   font-weight: 500;
-  color: #666;
+  color: #050505;
   margin: 0.75rem 0 0.35rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
