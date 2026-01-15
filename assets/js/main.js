@@ -32,6 +32,26 @@
     });
 
   });
+/**
+ * Smooth scroll for navmenu links (FIX)
+ */
+document.querySelectorAll('#navmenu a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (!target) return;
+
+    e.preventDefault();
+
+    const headerOffset = 80; // height of fixed header
+    const elementPosition = target.offsetTop;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  });
+});
 
   /**
    * Toggle mobile nav dropdowns
