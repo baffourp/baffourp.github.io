@@ -1348,3 +1348,7 @@ section,
 .skills .row {
   margin-top: 0.25rem;
 }
+
+section {
+  scroll-margin-top: 80px;
+}
