@@ -1307,13 +1307,13 @@ section,
 .skill-category {
   font-weight: 600 !important;
   margin-bottom: 0.75rem;
-  color: #0d6efd;
+  color: #fd0db1;
 }
 
 .skill-level {
   font-size: 0.75rem !important;
   font-weight: 600;
-  color: #6c757d;
+  color: #0d0d0e;
   margin: 0.75rem 0 0.4rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1328,7 +1328,7 @@ section,
 
 .skill-pills span {
   display: inline-block !important;
-  background-color: #f1f3f5 !important;
+  background-color: #c9e0f7 !important;
   color: #212529 !important;
   padding: 0.35rem 0.65rem !important;
   border-radius: 999px !important;
