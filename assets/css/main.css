@@ -1336,3 +1336,15 @@ section,
   line-height: 1.2;
   white-space: nowrap;
 }
+
+/* ================================
+   Skills spacing fix
+   ================================ */
+
+.skills-subtitle {
+  margin-bottom: 0.75rem;
+}
+
+.skills .row {
+  margin-top: 0.25rem;
+}
