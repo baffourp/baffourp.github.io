@@ -34,6 +34,31 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+<!-- Publications Styles -->
+<style>
+  .pub-filter-btn {
+    font-size: 13px; padding: 5px 14px; border-radius: 20px;
+    border: 1px solid #ccc; background: #fff; color: #555;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .pub-filter-btn.active, .pub-filter-btn:hover {
+    background: #f0f0f0; color: #111; border-color: #999;
+  }
+  .pub-item {
+    display: flex; gap: 14px; padding: 14px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .pub-num { font-size: 13px; font-weight: 600; color: #888; min-width: 26px; text-align: right; padding-top: 2px; }
+  .pub-title { font-size: 14px; font-weight: 600; color: #222; line-height: 1.5; margin-bottom: 4px; }
+  .pub-authors { font-size: 13px; color: #555; line-height: 1.5; margin-bottom: 4px; }
+  .pub-authors strong { color: #111; }
+  .pub-meta { font-size: 12px; color: #888; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .pub-journal { font-style: italic; }
+  .pub-badge-award { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: #fef3cd; color: #856404; font-weight: 600; }
+  .pub-badge-conf  { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: #d0e9ff; color: #0a58ca; font-weight: 600; }
+  .pub-link { font-size: 12px; color: #0a58ca; text-decoration: none; }
+  .pub-link:hover { text-decoration: underline; }
+</style>
 </head>
 
 <body class="index-page">
@@ -66,6 +91,7 @@
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="#portfolio"><i class="bi bi-beaker navicon"></i> Projects</a></li>
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Others</a></li>
+        <li><a href="#publications"><i class="bi bi-journal-bookmark navicon"></i> Publications</a></li>
         <!--li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
             <!--li><a href="#">Dropdown 1</a></li>
@@ -517,12 +543,36 @@ Formation of Synthetically- and Pharmaceutically Relevant Precursors </p>
   </div>
 </div>
          
-           
+   <!-- Publications Section -->
+<section id="publications" class="publications section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Publications</h2>
+    <p><sup>*</sup>Corresponding author &nbsp;&middot;&nbsp; <sup>&ddagger;</sup>Student mentee</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <!-- Filter Buttons -->
+    <div class="publication-filters" style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:1.5rem;">
+      <button class="pub-filter-btn active" onclick="filterPubs('all', this)">All (19)</button>
+      <button class="pub-filter-btn" onclick="filterPubs('jcp', this)">J. Chem. Phys.</button>
+      <button class="pub-filter-btn" onclick="filterPubs('jctc', this)">J. Chem. Theory Comput.</button>
+      <button class="pub-filter-btn" onclick="filterPubs('cyclo', this)">Cycloaddition</button>
+      <button class="pub-filter-btn" onclick="filterPubs('conf', this)">Conference</button>
+    </div>
+
+    <div id="pub-list"></div>
+
+      </div>
+
+    </section><!-- /Publications Section -->        
 
     </section><!-- /Portfolio Section -->
 
     <!-- Services Section -->
-    <section id="services" class="services section">
+  <section id="services" class="services section">
       
 
       <!-- Section Title -->
@@ -821,6 +871,62 @@ Formation of Synthetically- and Pharmaceutically Relevant Precursors </p>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Publications Script -->
+<script>
+const pubData = [
+  { n:19, tags:['jcp'], title:"Collision-Induced Fragmentation of the EMI-BF<sub>4</sub> Propellant in Electrospray Thrusters: <em>Ab Initio</em> Molecular Dynamics Simulations", authors:"Sampson, D. K.; <strong>Baffour Pipim, G.</strong>; Tingey, N.; Torres, J.; Depew, D.; Wang<sup>*</sup>, J.; Krylov, A. I.", journal:"J. Chem. Phys.", year:"2026", vol:"164, 164308", doi:"https://doi.org/10.1063/5.0307045", badge:null },
+  { n:18, tags:['pac'], title:"Photophysical Properties of Functionalized Terphenyls and Implications to Photoredox Catalysis", authors:"<strong>Baffour Pipim, G.</strong>; Sharada<sup>*</sup>, S. M.; Krylov<sup>*</sup>, A. I.", journal:"Pure Appl. Chem.", year:"2025", vol:"97, 1685&ndash;1698", doi:"https://doi.org/10.1515/pac-2025-0560", badge:null },
+  { n:17, tags:['jcp'], title:"<em>Ab Initio</em> Simulations of Dynamics of EMI-BF<sub>4</sub> Ionic Liquid Propellant Used in Electrospray Thrusters for Nanosatellite Applications", authors:"<strong>Baffour Pipim, G.</strong>; Sampson, D. K.; Tingey, N.; Torres, J.; Depew, D.; Wang, J.; Krylov<sup>*</sup>, A. I.", journal:"J. Chem. Phys.", year:"2025", vol:"163, 224309", doi:"https://doi.org/10.1063/5.0296441", badge:null },
+  { n:16, tags:['jctc'], title:"Performance of Density Functionals for Excited-State Properties of Isolated Chromophores and Exciplexes", authors:"Patra, A.; <strong>Baffour Pipim, G.</strong>; Krylov<sup>*</sup>, A. I.; Sharada<sup>*</sup>, S. M.", journal:"J. Chem. Theory Comput.", year:"2024", vol:"20 (6), 2520&ndash;2537", doi:"https://doi.org/10.1021/acs.jctc.4c00005", badge:null },
+  { n:15, tags:['conf'], title:"Exploring Collision-Induced Fragmentation in Porous Electrospray Thrusters", authors:"Sampson, D. K.; <strong>Baffour Pipim, G.</strong>; Tingey, N. N.; Torres, J.; Depew, D.; Wang, J.; Krylov<sup>*</sup>, A. I.", journal:"IEPC-2024-613", year:"2024", vol:"Conference Paper", doi:"https://www.researchgate.net/publication/383983879_Exploring_Collision-Induced_Fragmentation_in_Porous_Electrospray_Thrusters", badge:"conf" },
+  { n:14, tags:['cyclo'], title:"Tandem [4+2]/Retro[3+2]/[3+2] Cycloaddition Reactions of Fluorinated Oxadiazoles", authors:"<sup>&ddagger;</sup>Atta-Kumi, J.; <strong>Baffour Pipim<sup>*</sup>, G.</strong>; Opoku<sup>*</sup>, E.", journal:"J. Phys. Org. Chem.", year:"2023", vol:"37(1), e4567", doi:"https://doi.org/10.1002/poc.4567", badge:null },
+  { n:13, tags:['cyclo'], title:"Catalyst-Free (3+2) Cycloaddition Reaction of oxa-, aza-, and thio-bicyclic alkenes with cyclic and acyclic nitrones: A mechanistic study", authors:"<strong>Baffour Pipim<sup>*</sup>, G.</strong>; Opoku<sup>*</sup>, E.", journal:"Comput. Theor. Chem.", year:"2022", vol:"1124, 113790", doi:"https://doi.org/10.1016/j.comptc.2022.113790", badge:null },
+  { n:12, tags:['cyclo'], title:"Does the Reaction of Nitrone Derivatives with Allenoates Proceed by an Initial (3+2) Cycloaddition or O-Nucleophilic Addition?", authors:"<sup>&ddagger;</sup>Fosu, A.; <strong>Baffour Pipim, G.</strong>; Tia<sup>*</sup>, R.; Adei, E.", journal:"J. Mol. Graph. Model.", year:"2021", vol:"109, 108036", doi:"https://doi.org/10.1016/j.jmgm.2021.108036", badge:null },
+  { n:11, tags:['cyclo'], title:"Exploring the Chemo-, Regio-, and Stereoselectivities of (3+2) Cycloaddition Reactions: A DFT Study", authors:"<sup>&ddagger;</sup>Tawiah, A.; <strong>Baffour Pipim, G.</strong>; Tia<sup>*</sup>, R.; Adei, E.", journal:"J. Mol. Model.", year:"2021", vol:"27, 287", doi:"https://doi.org/10.1007/s00894-021-04911-0", badge:null },
+  { n:10, tags:['cyclo'], title:"A DFT Study of Double (3+2) Cycloaddition Reactions for the Formation of Spirobiisoxazolines", authors:"<sup>&ddagger;</sup>Ofori, I.; <strong>Baffour Pipim, G.</strong>; Tia<sup>*</sup>, R.; Adei, E.", journal:"J. Mol. Graph. Model.", year:"2021", vol:"109, 108033", doi:"https://doi.org/10.1016/j.jmgm.2021.108033", badge:null },
+  { n:9, tags:['cyclo'], title:"Investigating the Site-, Regio-, and Stereo-Selectivities of the Reactions between Organic Azides and Heteronorbornadiene", authors:"<sup>&ddagger;</sup>Atta-Kumi, J.; <strong>Baffour Pipim, G.</strong>; Tia<sup>*</sup>, R.; Adei, E.", journal:"J. Mol. Model.", year:"2021", vol:"27, 248", doi:"https://doi.org/10.1007/s00894-021-04857-3", badge:null },
+  { n:8, tags:['cyclo'], title:"Quantum Chemical Investigation of the Formation of Spiroheterocyclic Compounds via (3+2) Cycloaddition", authors:"<strong>Baffour Pipim, G.</strong>; Tia<sup>*</sup>, R.; Adei, E.", journal:"Tetrahedron", year:"2021", vol:"94, 132306", doi:"https://doi.org/10.1016/j.tet.2021.132306", badge:null },
+  { n:7, tags:['cyclo'], title:"Cycloaddition Reactions of Aryl Hetaryl Thioketones and C,N-Disubstituted Nitrilimines", authors:"<strong>Baffour Pipim, G.</strong>; Opoku<sup>*</sup>, E.", journal:"J. Mol. Model.", year:"2021", vol:"27, 84", doi:"https://doi.org/10.1007/s00894-021-04706-3", badge:null },
+  { n:6, tags:['cyclo'], title:"Computational Exploration of 1,3-Dipolar Cycloaddition Reactions", authors:"<strong>Baffour Pipim, G.</strong>; Tia<sup>*</sup>, R.; Adei, E.", journal:"J. Phys. Org. Chem.", year:"2020", vol:"34, e4174", doi:"https://doi.org/10.1002/poc.4174", badge:null },
+  { n:5, tags:['cyclo'], title:"(3+2) Cycloaddition Reaction of Benzonorbornadiene and Diazomethane Derivatives: A Theoretical Study", authors:"<strong>Baffour Pipim, G.</strong>; Tia<sup>*</sup>, R.; Adei, E.", journal:"J. Mol. Graph. Model.", year:"2020", vol:"101, 107713", doi:"https://doi.org/10.1016/j.jmgm.2020.107713", badge:null },
+  { n:4, tags:['cyclo'], title:"Regio-, Stereo-, and Enantioselectivities of Cycloaddition Reactions: A DFT Study", authors:"<strong>Baffour Pipim, G.</strong>; Tia<sup>*</sup>, R.; Adei, E.", journal:"J. Mol. Graph. Model.", year:"2020", vol:"100, 107672", doi:"https://doi.org/10.1016/j.jmgm.2020.107672", badge:null },
+  { n:3, tags:['cyclo'], title:"Peri-, Chemo-, Regio-, and Stereoselectivities of Nitrones with Oxazolones", authors:"<strong>Baffour Pipim, G.</strong>; Opoku, E.; Tia<sup>*</sup>, R.; Adei, E.", journal:"J. Mol. Graph. Model.", year:"2020", vol:"97, 107542", doi:"https://doi.org/10.1016/j.jmgm.2020.107542", badge:null },
+  { n:2, tags:['cyclo'], title:"Mechanistic Study of Tandem Cycloaddition Reactions for Polyaza Steroids", authors:"Opoku, E.; <strong>Baffour Pipim, G.</strong>; Tia<sup>*</sup>, R.; Adei, E.", journal:"J. Heterocycl. Chem.", year:"2020", vol:"57, 1748&ndash;1758", doi:"https://doi.org/10.1002/jhet.3900", badge:"award" },
+  { n:1, tags:['cyclo'], title:"Site-, Enantio-, and Stereoselectivities of Cycloaddition Reactions: A DFT Study", authors:"Opoku, E.; Arhin, G.; <strong>Baffour Pipim, G.</strong>; Adams, A. H.; Tia<sup>*</sup>, R.; Adei, E.", journal:"Theor. Chem. Acc.", year:"2020", vol:"139, 1&ndash;15", doi:"https://doi.org/10.1007/s00214-019-2529-8", badge:null },
+];
+
+let activePubTag = 'all';
+
+function filterPubs(tag, btn) {
+  activePubTag = tag;
+  document.querySelectorAll('.pub-filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPubs();
+}
+
+function renderPubs() {
+  const filtered = activePubTag === 'all' ? pubData : pubData.filter(p => p.tags.includes(activePubTag));
+  document.getElementById('pub-list').innerHTML = filtered.map(p => `
+    <div class="pub-item">
+      <div class="pub-num">${p.n}.</div>
+      <div class="pub-body">
+        <div class="pub-title">${p.title}</div>
+        <div class="pub-authors">${p.authors}</div>
+        <div class="pub-meta">
+          <span class="pub-journal">${p.journal}</span>
+          <span>${p.year} &middot; ${p.vol}</span>
+          ${p.badge === 'award' ? '<span class="pub-badge-award">Top Cited Article 2022</span>' : ''}
+          ${p.badge === 'conf'  ? '<span class="pub-badge-conf">Conference</span>' : ''}
+          <a class="pub-link" href="${p.doi}" target="_blank">&rarr; link</a>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+renderPubs();
+</script>
 
 </body>
 
